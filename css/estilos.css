@@ -1,0 +1,496 @@
+
+/* CSS */
+/* cambia la medida del rem, 1rem=10px*/
+html{
+font-size: 62.5%;
+}
+
+/*colores de la empresa*/
+.contenidoQS{
+    color:#1f4591;
+    display: flex;
+    flex-direction: column wrap;
+}
+.contenidoQS img{
+    width: 10rem;
+    height: 10rem;
+}
+
+
+.colorVerde{
+    color:#8CC63E;
+}
+.colorPlomo{
+    color:#54666F;
+}
+
+
+/*La fuente a usar en la web */
+#fuenteWeb{
+    font-family: 'Lato', sans-serif;
+   /* background-color: rgb(242, 239, 239);*/
+    }
+
+
+/*CSS del Header */
+
+header{
+    background-color: white;
+    position: sticky;
+    top: 0;
+}
+.menuPrincipal{
+
+    height:14rem;
+    background-color: #1f4591;
+    text-align: right;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+}
+.menuPrincipal a{
+    color: white;
+    font-size: 2rem;
+}
+.menuPrincipal ul li{
+display: inline-block;
+padding: 2rem;
+}
+.logoCabecera{
+    height: 8rem;
+}
+
+/*CSS del header Nav */
+
+/* css para toda la paginas */
+a{ /* quitamos la lineas de los url*/
+    text-decoration: none;
+
+}
+ul{ /* quitmaos las vinetas d elas litas*/
+    list-style-type: none;
+    /*font-size: 0  truco para el uso de inline-block*/
+    }
+
+h1{
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.solucionesTextoGamma
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.ordenSoluciones
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+}
+
+.separarTextoSolucion
+{
+    padding: 1rem;
+}
+
+
+
+
+/*.parallax{ /* efecto parallax 
+    background-image: url("/Media/oks-selectieMain.jpg");
+    height: 600px;
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size:  cover;
+	height:30rem;
+	max-width: 100%;
+	position: relative
+}*/
+
+
+
+
+/* css para pagin de contacto*/
+.espacioCajas{
+   /*margin:2rem 140rem 2rem 2rem;*/
+   display: block;
+    padding:1rem;
+    margin: 1rem;
+}
+
+
+
+/* css para Main */
+main a{
+    font-size: 2rem;
+}
+
+.dimensionesImagSol{
+    width: 30rem;
+    height: 30rem;
+    
+}
+.dimensionesImagSol1{
+    width: 15rem;
+    height: 15rem;
+    padding: 1rem;
+    
+}
+.dimensionesImagSol2{
+    width: 30rem;
+    height: 32rem;
+    padding: 1rem;
+    
+}
+.dimensionesImagSol3{
+    width: 12rem;
+    height: 12rem;
+    padding: 1rem;
+    
+}
+
+.principal__titulo{
+    font-size: 4rem;
+    text-align:center;
+    font-weight:bold;
+
+}
+.quienesSomos h2{
+    font-size: 2rem;
+    color:#8CC63E;
+    text-align:center;
+    font-weight:bold;
+
+}
+.quienesSomos p{
+    width: 125rem;
+    text-align: center;
+    margin: 4rem;
+    font-size: 2rem;
+
+}
+    
+/* css para Footer */
+
+footer ul li{
+    font-size: 2rem;
+
+}
+.redesFlotantes img{
+    width: 3rem;
+    display: inline-block;
+    
+    }
+    
+    .whatsapp{
+        position: fixed;
+        right: 4rem;
+        bottom: 5rem;
+    }
+    .whatsapp img{
+        width: 5rem;
+        
+    }
+
+/* sintaxis para textos
+
+.tituloContacto{
+color:blank;
+font-style:italic;/*
+font-weight:bold;
+font-family:arial,helvetica,sans-serif;
+text-align:center;
+line-height:2;
+text-decoration:underline;
+.principal__subtitulo{
+font-size: 20px;
+background-color: yellow;
+
+
+
+}
+
+}*/
+
+/*  grid para la pagina de limpiadores */
+
+.contenedorLim{
+   
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 0.5fr 2fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "header header"
+    "titulo titulo"
+    "contenido contenido"
+    "galeria1 galeria3"
+    "galeria2 galeria3"
+    "footer footer";
+
+
+}
+.menuPrincipalLim{
+    grid-area: header;
+    background-color: #1f4591;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+.menuPrincipalLim a{
+    color: white;
+    font-size: 1.5rem;
+}
+
+.menuPrincipalLim ul{
+    display: flex;
+    flex-direction: row;
+
+}
+.menuPrincipalLim ul li{
+display: inline-block;
+padding: 1rem;
+}
+
+.tituloLim{
+    grid-area: titulo;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.contenidoProdLim{
+
+    grid-area: contenido;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.contenidoProd1Lim{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.contenidoProd1Lim p{
+    width: 50rem;
+    font-size: 2rem;
+}
+
+.galeria1Limp{
+    grid-area:galeria1;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+
+}
+.galeria2Limp{
+
+    grid-area:galeria2;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+}
+.galeria3Limp{
+
+    grid-area:galeria3;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+
+}
+
+.footerlimpiadores{
+
+    padding-top: 2rem;
+    background-color: #1f4591;
+    grid-area: footer;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    color: white;
+
+}
+
+@media screen and (max-width:768px)
+{ .contenedorLim{
+   
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 0.5fr 2fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "header header"
+    "titulo titulo"
+    "contenido contenido"
+    "galeria1 galeria2"
+    "footer footer";
+                }
+
+    .galeria2Limp{
+        justify-content: flex-start;
+                }
+    .galeria3Limp{
+        display: none;
+    }
+
+    .menuPrincipalLim{
+        flex-direction: column;
+    }
+
+    
+}
+@media screen and (max-width:570px)
+{ .contenedorLim{
+   
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 0.5fr 1.5fr 0.5fr 0.5fr 1fr;
+    grid-template-areas: 
+    "header"
+    "titulo"
+    "contenido"
+    "galeria1"
+    "galeria2"
+    "footer";
+}
+
+    .menuPrincipalLim ul{
+        flex-direction: column;
+    }
+  
+    .galeria2Limp{
+        justify-content: center;
+    }
+
+    .galeria1Limp{ 
+       justify-content: center;
+    }
+    .galeria3Limp{
+        display: none;
+    }
+    .h1{
+        font-size: 6rem;
+    }
+
+    
+}
+
+/*  grid para la pagina de Index */
+
+.contenedorIndx{
+   
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 600px 300px 100px;
+    grid-template-areas: 
+    "header"
+    "Soluciones"
+    "Quienesomos"
+    "footer";
+
+}
+.menuPrincipalIndx{
+    grid-area: header;
+    background-color: #1f4591;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+.menuPrincipalIndx a{
+    color: white;
+    font-size: 1.5rem;
+}
+
+.menuPrincipalIndx ul{
+    display: flex;
+    flex-direction: row;
+
+}
+.menuPrincipalIndx ul li{
+display: inline-block;
+padding: 1rem;
+}
+
+.principal{
+    grid-area: Soluciones;
+}
+
+.quienesSomos{
+    grid-area: Quienesomos;
+}
+.ordenFooter
+{
+    grid-area: footer;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+@media screen and (max-width:768px)
+{
+    .contenedorIndx{
+   
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 200px 700px 300px 100px;
+        grid-template-areas: 
+        "header"
+        "Soluciones"
+        "Quienesomos"
+        "footer";
+    
+    }    
+    .menuPrincipalIndx{
+        flex-direction: column;
+    }  
+    .ordenSoluciones
+{
+    flex-direction: column;
+    align-items: center;
+}
+.dimensionesImagSol{
+    width: 15rem;
+    height: 15rem;
+    }
+}
+
+@media screen and (max-width:570px)
+{
+    .contenedorIndx{
+   
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 300px 700px 300px 100px;
+        grid-template-areas: 
+        "header"
+        "Soluciones"
+        "Quienesomos"
+        "footer";
+    
+    }    
+
+    .menuPrincipalIndx ul{
+        flex-direction: column;
+    }
+    .ordenSoluciones
+    {
+    flex-direction: column;
+    align-items: center;
+
+    }
+    .dimensionesImagSol{
+    width: 15rem;
+    height: 15rem;
+    }
+}
