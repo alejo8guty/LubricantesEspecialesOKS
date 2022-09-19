@@ -21,3 +21,16 @@ font-size: 62.5%;
 .nav-link{
     font-size: 2rem;
 }
+
+.btn-primary{
+
+    background-color: #8CC63E;
+    border-color: #54666F;
+    transition: all 0.25s ease-out;
+}
+
+:not(.btn-check)+ .btn:hover{
+    background-color: #66922c;
+    border-color: #54666F;
+    transform: scale(0.9);
+}
