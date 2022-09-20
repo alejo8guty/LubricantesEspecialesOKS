@@ -17,11 +17,12 @@ font-size: 62.5%;
 .colorPlomo{
     color:#54666F;
 }
-
+/* cambia la medida de texot del menu y color*/
 .nav-link{
     font-size: 2rem;
+    color: white;
 }
-
+/* cambiar y efecto en los botones de los cards*/
 .btn-primary{
 
     background-color: #8CC63E;
@@ -33,4 +34,31 @@ font-size: 62.5%;
     background-color: #66922c;
     border-color: #54666F;
     transform: scale(0.9);
+}
+
+/* cambia el color del menu hamburguesa*/
+
+.navbar-toggler-icon{
+    background-color: white;
+}
+
+.navbar{--bs-navbar-toggler-border-color:white}
+.navbar>.container-fluid{
+    background-color: #1f4591;
+}
+
+/* aniacion del logo del menu*/
+
+@keyframes animacionlogo{
+    20%{filter:brightness(10%) }
+    50%{transform: rotatey(90deg);}
+    80%{filter:brightness(100%) }
+}
+
+.logoCabecera{
+
+    animation-name: animacionlogo;
+    animation-duration: 5s;
+    animation-delay: 3s;
+    animation-iteration-count: infinite;
 }
