@@ -9,11 +9,16 @@ font-size: 62.5%;
 .contenidoQS{
     color:#1f4591;
     display: flex;
-    flex-direction: column wrap;
+    flex-direction: row;
+    justify-content: center;
 }
 .contenidoQS img{
-    width: 10rem;
-    height: 10rem;
+    width: 15rem;
+    height: 16rem;
+    margin-right: 80px;
+}
+.contenidoQS p{
+    max-width: 100%;
 }
 
 
@@ -26,17 +31,17 @@ font-size: 62.5%;
 
 
 /*La fuente a usar en la web */
-#fuenteWeb{
+*{
     font-family: 'Lato', sans-serif;
    /* background-color: rgb(242, 239, 239);*/
     }
 
 
-çSS del Header 
+/*CSS del Header 
 
 header{
     background-color: white;
-    /* position: sticky;*/
+    /* position: sticky;
     top: 0;
 }
 .menuPrincipal{
@@ -60,7 +65,7 @@ padding: 2rem;
 }
 .logoCabecera{
     height: 8rem;
-}
+}*/
 
 
 /*CSS del header Nav */
@@ -90,9 +95,9 @@ h1{
 
 .solucionesTextoGamma img:hover{
 
-    height: 35rem;
-    width: 35rem;
-    margin: 3rem;
+    height: 30rem;
+    width: 30rem;
+    padding-bottom: 3rem;
     
 }
 
@@ -237,39 +242,14 @@ background-color: yellow;
    
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 0.5fr 2fr 1fr 1fr 1fr;
+    grid-template-rows: 0.5fr 2fr 1fr 1fr;
     grid-template-areas: 
-    "header header"
+
     "titulo titulo"
     "contenido contenido"
     "galeria1 galeria3"
-    "galeria2 galeria3"
-    "footer footer";
-
-
-}
-.menuPrincipalLim{
-    grid-area: header;
-    background-color: #1f4591;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-
-}
-.menuPrincipalLim a{
-    color: white;
-    font-size: 1.5rem;
-}
-
-.menuPrincipalLim ul{
-    display: flex;
-    flex-direction: row;
-
-}
-.menuPrincipalLim ul li{
-display: inline-block;
-padding: 1rem;
+    "galeria2 galeria3";
+    
 }
 
 .tituloLim{
@@ -294,7 +274,18 @@ padding: 1rem;
     justify-content: center;
 }
 
+.contenidoProd2Lim
+{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+}
+
 .contenidoProd1Lim p{
+    width: 50rem;
+    font-size: 2rem;
+}
+.contenidoProd2Lim p{
     width: 50rem;
     font-size: 2rem;
 }
@@ -327,8 +318,7 @@ padding: 1rem;
     padding-top: 2rem;
     background-color: #1f4591;
     grid-area: footer;
-    display: flex;
-    flex-direction: row;
+    display: flex wrap;
     justify-content: space-around;
     color: white;
 
@@ -339,13 +329,11 @@ padding: 1rem;
    
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 0.5fr 2fr 1fr 1fr 1fr;
+    grid-template-rows:  0.5fr 2fr 1fr 1fr;
     grid-template-areas: 
-    "header header"
     "titulo titulo"
     "contenido contenido"
-    "galeria1 galeria2"
-    "footer footer";
+    "galeria1 galeria2";
                 }
 
     .galeria2Limp{
@@ -353,33 +341,37 @@ padding: 1rem;
                 }
     .galeria3Limp{
         display: none;
-    }
-
-    .menuPrincipalLim{
-        flex-direction: column;
-    }
-
-    
+    }  
 }
-@media screen and (max-width:570px)
+
+@media screen and (max-width:540px)
 { .contenedorLim{
    
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 0.5fr 1.5fr 0.5fr 0.5fr 1fr;
+    grid-template-rows:  0.2fr 1fr 0.5fr 0.5fr;
     grid-template-areas: 
-    "header"
+   
     "titulo"
     "contenido"
     "galeria1"
-    "galeria2"
-    "footer";
+    "galeria2";
 }
 
-    .menuPrincipalLim ul{
-        flex-direction: column;
+    .contenidoProd1Lim{
+    display: flex;
+    flex-flow: column-reverse;
+    align-items: center;  
     }
-  
+
+    .dimensionesImagSol3{
+        width: 20rem;
+        height: 20rem;}
+
+    .dimensionesImagSol1{
+            width: 30rem;
+            height: 30rem;}
+
     .galeria2Limp{
         justify-content: center;
     }
@@ -397,43 +389,176 @@ padding: 1rem;
     
 }
 
-/*  grid para la pagina de Index */
+/*  grid para la pagina de Mantenimiento */
+
+.contenedorMtto{
+   
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.5fr 1fr 1fr 2fr;
+    grid-template-areas: 
+
+    "titulo titulo"
+    "galeria1 galeria3"
+    "galeria2 galeria3"
+    "contenido contenido";
+
+    
+}
+
+.tituloMtto{
+    grid-area: titulo;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+
+.galeria1Mtto{
+    grid-area:galeria1;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+
+}
+.galeria2Mtto{
+
+    grid-area:galeria2;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+}
+.galeria3Mtto{
+
+    grid-area:galeria3;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+
+}
+.contenidoProdMtto{
+
+    grid-area: contenido;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.contenidoProd1Mtto{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.contenidoProd2Mtto
+{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+}
+
+.contenidoProd1Mtto p{
+    width: 50rem;
+    font-size: 2rem;
+}
+.contenidoProd2Mtto p{
+    width: 50rem;
+    font-size: 2rem;
+}
+.footerMantenimiento{
+
+    padding-top: 2rem;
+    background-color: #1f4591;
+    grid-area: footer;
+    display: flex wrap;
+    justify-content: space-around;
+    color: white;
+
+}
+
+@media screen and (max-width:768px)
+{ .contenedorMtto{
+   
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows:  0.5fr 2fr 1fr 1fr;
+    grid-template-areas: 
+    "titulo titulo"
+    "contenido contenido"
+    "galeria1 galeria2";
+                }
+
+    .galeria2Mtto{
+        justify-content: flex-start;
+                }
+    .galeria3Mtto{
+        display: none;
+    }  
+}
+
+@media screen and (max-width:540px)
+{ .contenedorMtto{
+   
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows:  0.2fr 1fr 0.5fr 0.5fr;
+    grid-template-areas: 
+   
+    "titulo"
+    "contenido"
+    "galeria1"
+    "galeria2";
+}
+
+    .contenidoProd1Mtto{
+    display: flex;
+    flex-flow: column-reverse;
+    align-items: center;  
+    }
+
+    .dimensionesImagSol3{
+        width: 20rem;
+        height: 20rem;}
+
+    .dimensionesImagSol1{
+            width: 30rem;
+            height: 30rem;}
+
+    .galeria2Mtto{
+        justify-content: center;
+    }
+
+    .galeria1Mtto{ 
+       justify-content: center;
+    }
+    .galeria3Mtto{
+        display: none;
+    }
+    .h1{
+        font-size: 6rem;
+    }
+
+    
+}
+
+
+
+/*  grid para la pagina de Index se us VH o FR */
 
 .contenedorIndx{
    
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 100px 600px 300px 100px;
+    grid-template-columns: 1320px;
+    grid-template-rows: 400px 300px 150px;
+
     grid-template-areas: 
-    "header"
     "Soluciones"
     "Quienesomos"
     "footer";
-
 }
-.menuPrincipalIndx{
-    grid-area: header;
-    background-color: #1f4591;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-
-}
-.menuPrincipalIndx a{
-    color: white;
-    font-size: 1.5rem;
-}
-
-.menuPrincipalIndx ul{
-    display: flex;
-    flex-direction: row;
-
-}
-.menuPrincipalIndx ul li{
-display: inline-block;
-padding: 1rem;
-}
+    
 
 .principal{
     grid-area: Soluciones;
@@ -442,40 +567,46 @@ padding: 1rem;
 .quienesSomos{
     grid-area: Quienesomos;
 }
-.ordenFooter
+.ordenFooter_Indx
 {
     grid-area: footer;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    color: white;
+    background-color: #1f4591;
 }
+
 
 @media screen and (max-width:768px)
 {
     .contenedorIndx{
    
         display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 200px 700px 300px 100px;
+        grid-template-columns: 960px;
+        grid-template-rows: 300px 350px 200px;
         grid-template-areas: 
-        "header"
+        
         "Soluciones"
         "Quienesomos"
         "footer";
     
     }    
-    .menuPrincipalIndx{
-        flex-direction: column;
-    }  
-    .ordenSoluciones
-{
+
+.dimensionesImagSol{
+    width: 20rem;
+    height: 20rem;
+    }
+
+.ordenFooter_Indx{
+
+    flex-flow: column wrap;
+}
+.contenidoQS{
+    display: flex;
     flex-direction: column;
     align-items: center;
 }
-.dimensionesImagSol{
-    width: 15rem;
-    height: 15rem;
-    }
 }
 
 @media screen and (max-width:570px)
@@ -483,29 +614,28 @@ padding: 1rem;
     .contenedorIndx{
    
         display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 300px 700px 300px 100px;
+        grid-template-columns: 540px;
+        grid-template-rows: 800px 500px 200px;
         grid-template-areas: 
-        "header"
+        
         "Soluciones"
         "Quienesomos"
         "footer";
     
     }    
 
-    .menuPrincipalIndx ul{
-        flex-direction: column;
-    }
+  
     .ordenSoluciones
     {
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
 
     }
     .dimensionesImagSol{
-    width: 15rem;
-    height: 15rem;
+    width: 20rem;
+    height: 20rem;
     }
+
 }
 
 /* cambia la medida de texot del menu y color*/
