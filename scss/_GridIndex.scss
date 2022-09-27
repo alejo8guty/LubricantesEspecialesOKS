@@ -1,0 +1,93 @@
+/*  grid para la pagina de Index se us VH o FR */
+
+.contenedorIndx{
+   
+    display: grid;
+    grid-template-columns: 1320px;
+    grid-template-rows: 400px 300px 150px;
+
+    grid-template-areas: 
+    "Soluciones"
+    "Quienesomos"
+    "footer";
+}
+    
+
+.principal{
+    grid-area: Soluciones;
+}
+
+.quienesSomos{
+    grid-area: Quienesomos;
+}
+.ordenFooter_Indx
+{
+    grid-area: footer;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    color: white;
+    background-color: #1f4591;
+}
+
+
+@media screen and (max-width:768px)
+{
+    .contenedorIndx{
+   
+        display: grid;
+        grid-template-columns: 960px;
+        grid-template-rows: 300px 350px 200px;
+        grid-template-areas: 
+        
+        "Soluciones"
+        "Quienesomos"
+        "footer";
+    
+    }    
+
+.dimensionesImagSol{
+    width: 20rem;
+    height: 20rem;
+    }
+
+.ordenFooter_Indx{
+
+    flex-flow: column wrap;
+}
+.contenidoQS{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+}
+
+@media screen and (max-width:570px)
+{
+    .contenedorIndx{
+   
+        display: grid;
+        grid-template-columns: 540px;
+        grid-template-rows: 800px 500px 200px;
+        grid-template-areas: 
+        
+        "Soluciones"
+        "Quienesomos"
+        "footer";
+    
+    }    
+
+  
+    .ordenSoluciones
+    {
+    flex-direction: column;
+    align-items: stretch;
+
+    }
+    .dimensionesImagSol{
+    width: 20rem;
+    height: 20rem;
+    }
+
+}
+

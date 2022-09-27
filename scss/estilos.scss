@@ -1,0 +1,161 @@
+/* import */
+
+@import "bootstrap";
+@import "variables";
+@import "GridIndex";
+@import "GridMtto";
+@import "GridLimp";
+
+
+/* cambia la medida del rem, 1rem=10px*/
+html{
+    font-size: 62.5%;
+    }
+    *{
+    font-family: 'Lato', sans-serif;
+    }
+  
+    a{ /* quitamos la lineas de los url*/
+        text-decoration: none; }
+
+    ul{ /* quitmaos las vinetas d elas litas*/
+        list-style-type: none;}
+    
+    h1{
+        font-size: 3rem;
+        font-weight: bold;}
+
+    .ordenSoluciones
+    {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    
+    }
+    
+    .separarTextoSolucion
+    {
+        padding: 1rem;
+    }
+
+    .principal__titulo{
+        font-size: 4rem;
+        text-align:center;
+        font-weight:bold;
+    
+    }
+
+    .dimensionesImagSol{
+        width: 30rem;
+        height: 30rem;
+        transition: 2s;
+        
+    }
+    .dimensionesImagSol1{
+        width: 15rem;
+        height: 15rem;
+        padding: 1rem;
+        
+    }
+    .dimensionesImagSol2{
+        width: 30rem;
+        height: 32rem;
+        padding: 1rem;
+        
+    }
+    .dimensionesImagSol3{
+        width: 12rem;
+        height: 12rem;
+        padding: 1rem;
+        
+    }
+    
+    @keyframes animacionlogo{
+        20%{filter:brightness(10%) }
+        50%{transform: rotatey(90deg);}
+        80%{filter:brightness(100%) }
+    }
+    
+    .logoCabecera{
+    
+        animation-name: animacionlogo;
+        animation-duration: 5s;
+        animation-delay: 3s;
+        animation-iteration-count: infinite;
+    }
+
+    .contenidoQS{
+        color: colorAzul;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+     img{
+        width: 15rem;
+        height: 16rem;
+        margin-right: 80px;
+        }
+      p{
+        max-width: 100%;
+        }
+    }
+    
+    
+    .solucionesTextoGamma
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    
+    img:hover{
+    
+        height: 30rem;
+        width: 30rem;
+        padding-bottom: 3rem;
+        
+            }
+    }
+
+    .quienesSomos{
+         h2{
+        font-size: 2rem;
+        color:#8CC63E;
+        text-align:center;
+        font-weight:bold;}
+    
+        p{
+        width: 125rem;
+        text-align: center;
+        margin: 4rem;
+        font-size: 2rem;
+        }
+                }
+        main { 
+            a{
+            font-size: 2rem;}
+        }
+
+        /* css para Footer */
+
+    footer {
+            ul{
+             li{
+                font-size: 2rem;
+             }
+            }
+            }
+
+    .redesFlotantes {
+        img{
+        width: 3rem;
+        display: inline-block;
+            }
+                }
+    
+    .whatsapp{
+        position: fixed;
+        right: 4rem;
+        bottom: 5rem;
+        img{
+        width: 5rem;
+        }
+    }

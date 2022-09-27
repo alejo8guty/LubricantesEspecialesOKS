@@ -1,0 +1,156 @@
+/*  grid para la pagina de Mantenimiento */
+
+.contenedorMtto{
+   
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.5fr 1fr 1fr 2fr;
+    grid-template-areas: 
+
+    "titulo titulo"
+    "galeria1 galeria3"
+    "galeria2 galeria3"
+    "contenido contenido";
+
+    
+}
+
+.tituloMtto{
+    grid-area: titulo;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+
+.galeria1Mtto{
+    grid-area:galeria1;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+
+}
+.galeria2Mtto{
+
+    grid-area:galeria2;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+}
+.galeria3Mtto{
+
+    grid-area:galeria3;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+
+}
+.contenidoProdMtto{
+
+    grid-area: contenido;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.contenidoProd1Mtto{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.contenidoProd2Mtto
+{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+}
+
+.contenidoProd1Mtto p{
+    width: 50rem;
+    font-size: 2rem;
+}
+.contenidoProd2Mtto p{
+    width: 50rem;
+    font-size: 2rem;
+}
+.footerMantenimiento{
+
+    padding-top: 2rem;
+    background-color: #1f4591;
+    grid-area: footer;
+    display: flex wrap;
+    justify-content: space-around;
+    color: white;
+
+}
+
+@media screen and (max-width:768px)
+{ .contenedorMtto{
+   
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows:  0.5fr 2fr 1fr 1fr;
+    grid-template-areas: 
+    "titulo titulo"
+    "contenido contenido"
+    "galeria1 galeria2";
+                }
+
+    .galeria2Mtto{
+        justify-content: flex-start;
+                }
+    .galeria3Mtto{
+        display: none;
+    }  
+}
+
+@media screen and (max-width:540px)
+{ .contenedorMtto{
+   
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows:  0.2fr 1fr 0.5fr 0.5fr;
+    grid-template-areas: 
+   
+    "titulo"
+    "contenido"
+    "galeria1"
+    "galeria2";
+}
+
+    .contenidoProd1Mtto{
+    display: flex;
+    flex-flow: column-reverse;
+    align-items: center;  
+    }
+
+    .dimensionesImagSol3{
+        width: 20rem;
+        height: 20rem;}
+
+    .dimensionesImagSol1{
+            width: 30rem;
+            height: 30rem;}
+
+    .galeria2Mtto{
+        justify-content: center;
+    }
+
+    .galeria1Mtto{ 
+       justify-content: center;
+    }
+    .galeria3Mtto{
+        display: none;
+    }
+    .h1{
+        font-size: 6rem;
+    }
+
+    
+}
+
+
+
