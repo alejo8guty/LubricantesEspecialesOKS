@@ -17,9 +17,7 @@
 
 .tituloMtto{
     grid-area: titulo;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+    @include flexrow;
 }
 
 
@@ -77,13 +75,8 @@
     font-size: 2rem;
 }
 .footerMantenimiento{
+@extend .ordenFooter_Indx
 
-    padding-top: 2rem;
-    background-color: #1f4591;
-    grid-area: footer;
-    display: flex wrap;
-    justify-content: space-around;
-    color: white;
 
 }
 

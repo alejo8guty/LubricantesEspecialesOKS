@@ -1,5 +1,20 @@
-$colorVerde:#8CC63E;
 
-$colorPlomo:#54666F;
+$estilos:(
+    colorVerde:#8CC63E,
+    colorPlomo:#54666F,
+    colorAzul:#1f4591,
 
-$colorAzul:#1f4591;
+);
+
+@mixin flexrow{
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: center;
+}
+
+@mixin flexcolumn{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

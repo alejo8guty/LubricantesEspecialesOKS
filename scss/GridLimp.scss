@@ -78,12 +78,7 @@
 
 .footerlimpiadores{
 
-    padding-top: 2rem;
-    background-color: #1f4591;
-    grid-area: footer;
-    display: flex wrap;
-    justify-content: space-around;
-    color: white;
+@extend .ordenFooter_Indx
 
 }
 

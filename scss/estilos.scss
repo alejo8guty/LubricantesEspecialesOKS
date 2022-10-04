@@ -1,10 +1,11 @@
 /* import */
 
-@import "bootstrap";
 @import "variables";
+@import "bootstrap";
 @import "GridIndex";
 @import "GridMtto";
 @import "GridLimp";
+@import "GridContacto";
 
 
 /* cambia la medida del rem, 1rem=10px*/
@@ -85,7 +86,7 @@ html{
     }
 
     .contenidoQS{
-        color: colorAzul;
+        color: map-get($estilos,colorVerde);
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -118,7 +119,7 @@ html{
     .quienesSomos{
          h2{
         font-size: 2rem;
-        color:#8CC63E;
+        color:map-get($estilos,colorVerde);
         text-align:center;
         font-weight:bold;}
     
