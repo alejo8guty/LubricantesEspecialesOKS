@@ -116,6 +116,7 @@
 .contenidoProd1Mtto {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center; }
 
 .contenidoProd2Mtto {

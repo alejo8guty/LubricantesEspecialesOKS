@@ -54,9 +54,7 @@
 
 .contenidoProd1Mtto{
 
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+    @include flexrow;
 }
 
 .contenidoProd2Mtto
