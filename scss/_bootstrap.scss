@@ -2,6 +2,7 @@
 .nav-link{
     font-size: 2rem;
     color: white;
+ 
 }
 /* cambiar y efecto en los botones de los cards*/
 .btn-primary{
@@ -25,5 +26,6 @@
 
 .navbar{--bs-navbar-toggler-border-color:white}
 .navbar>.container-fluid{
-    background-color: #1f4591;
+    background-color:  map-get($estilos,colorAzul );
+    padding: 4rem;
 }

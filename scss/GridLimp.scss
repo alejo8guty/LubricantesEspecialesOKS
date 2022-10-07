@@ -5,21 +5,25 @@
    
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 0.5fr 2fr 1fr 1fr;
+    grid-template-rows: 0.5fr 2fr 1fr 1fr 1fr;
     grid-template-areas: 
 
     "titulo titulo"
     "contenido contenido"
     "galeria1 galeria3"
-    "galeria2 galeria3";
+    "galeria2 galeria3"
+    "footer footer";
+
     
 }
+
 
 .tituloLim{
     grid-area: titulo;
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
 }
 
 .contenidoProdLim{
@@ -45,11 +49,15 @@
 }
 
 .contenidoProd1Lim p{
-    width: 50rem;
+    display: flex;
+    flex-flow: row wrap;
+    width: 100rem;
     font-size: 2rem;
 }
 .contenidoProd2Lim p{
-    width: 50rem;
+    display: flex;
+    flex-flow: row wrap;
+    width: 100rem;
     font-size: 2rem;
 }
 
@@ -77,7 +85,7 @@
 }
 
 .footerlimpiadores{
-
+grid-area: footer;
 @extend .ordenFooter_Indx
 
 }
@@ -85,40 +93,41 @@
 @media screen and (max-width:768px)
 { .contenedorLim{
    
-    display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows:  0.5fr 2fr 1fr 1fr;
     grid-template-areas: 
     "titulo titulo"
     "contenido contenido"
-    "galeria1 galeria2";
+    "galeria1 galeria2"
+    "footer footer";
                 }
 
     .galeria2Limp{
         justify-content: flex-start;
+       
                 }
     .galeria3Limp{
         display: none;
     }  
-}
 
+}
 @media screen and (max-width:540px)
 { .contenedorLim{
    
-    display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows:  0.2fr 1fr 0.5fr 0.5fr;
+    grid-template-rows:  0.2fr 1.5fr 0.4fr 0.4fr 0.4fr;
     grid-template-areas: 
    
     "titulo"
     "contenido"
     "galeria1"
-    "galeria2";
-}
+    "galeria2"
+    "footer";
+    }
 
     .contenidoProd1Lim{
-    display: flex;
-    flex-flow: column-reverse;
+   
+    flex-direction: column-reverse;
     align-items: center;  
     }
 
@@ -141,8 +150,17 @@
         display: none;
     }
     .h1{
-        font-size: 6rem;
+        font-size: 8rem;
     }
-
-    
+    .contenidoProd1Lim p{
+        width: 30rem;
+        font-size: 2rem;
+    }
+    .contenidoProd2Lim p{
+        width: 30rem;
+        font-size: 2rem;
+                        }
 }
+
+
+

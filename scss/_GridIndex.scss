@@ -3,22 +3,90 @@
 .contenedorIndx{
    
     display: grid;
-    grid-template-columns: 1320px;
-    grid-template-rows: 400px 300px 150px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.4fr 2fr 0.2fr 2fr 1.5fr;
 
     grid-template-areas: 
-    "Soluciones"
-    "Quienesomos"
-    "footer";
+    "titulo titulo titulo"
+    "solucion1 solucion2 solucion3"
+    "linea linea linea"
+    "quienesomos quienesomos fotogrupo"
+    "footer footer footer";
 }
     
 
-.principal{
-    grid-area: Soluciones;
+.principal__titulo{
+    grid-area: titulo;
+    @include flexcolumn;
+    padding: 2rem;
 }
 
-.quienesSomos{
-    grid-area: Quienesomos;
+.solucion1{
+    grid-area: solucion1;
+    @include flexcolumn;
+    a{ /* quitamos la lineas de los url*/
+        text-decoration: none; 
+        font-size: 2rem;}
+    img{
+        max-width: 80%;
+        height: auto;
+        img:hover{
+            height: 30rem;
+            width: 30rem;
+                }
+    }
+
+}
+.solucion2{
+    grid-area: solucion2;
+    @extend .solucion1;
+}
+.solucion3{
+    grid-area: solucion3;
+    @extend .solucion1;
+}
+
+.lineaindx{
+    grid-area: linea;
+    padding: 1rem;
+    color: map-get($estilos,colorVerde);
+
+}
+
+.quienesomos{
+    grid-area: quienesomos;
+
+    h2{
+        text-align: center;
+        padding-top: 2rem;
+        color: map-get($estilos,colorVerde);
+        font-weight: bold;
+        font-size: 2rem;
+    }
+
+    .contenidoQS{
+        color: map-get($estilos,colorVerde);
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        
+  
+      p{
+        max-width: 100%;
+        text-align: center;
+        margin: 4rem;
+        font-size: 2rem;
+        }
+    }
+}
+.fotogrupo{
+    grid-area: fotogrupo;
+    @include flexcolumn;
+    img{
+        width: 20rem;
+        height: 20rem;
+        padding-top: 2rem;
+    }
 }
 .ordenFooter_Indx
 {
@@ -26,68 +94,66 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    align-items: center;
     color: white;
     background-color: map-get($estilos,colorAzul );
+  
+    a{ /* quitamos la lineas de los url*/
+        text-decoration: none; }
+
+    ul{ /* quitmaos las vinetas d elas litas*/
+        list-style-type: none;}
 }
 
 
 @media screen and (max-width:768px)
 {
     .contenedorIndx{
-   
-        display: grid;
-        grid-template-columns: 960px;
-        grid-template-rows: 300px 350px 200px;
-        grid-template-areas: 
-        
-        "Soluciones"
-        "Quienesomos"
-        "footer";
-    
-    }    
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.2fr 1fr 1fr 0.2fr 1fr 0.5fr;
 
-.dimensionesImagSol{
-    width: 20rem;
-    height: 20rem;
+    grid-template-areas: 
+    "titulo titulo"
+    "solucion1 solucion2"
+    "solucion3 solucion3"
+    "linea linea"
+    "quienesomos quienesomos"
+    "footer footer";
     }
 
-.ordenFooter_Indx{
+    .solucion1{
+
+        img{
+            max-width: 70%;
+            height: auto;
+        }
+    }
+
+    .ordenFooter_Indx{
 
     flex-flow: column wrap;
-}
-.contenidoQS{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+    }
+    .fotogrupo{
+        display: none;
+    }
 }
 
-@media screen and (max-width:570px)
+@media screen and (max-width:540px)
 {
     .contenedorIndx{
-   
-        display: grid;
-        grid-template-columns: 540px;
-        grid-template-rows: 800px 500px 200px;
-        grid-template-areas: 
-        
-        "Soluciones"
-        "Quienesomos"
-        "footer";
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.2fr 0.5fr 0.5fr 0.5fr 0.2fr 0.5fr 0.4fr;
     
-    }    
+        grid-template-areas: 
+        "titulo"
+        "solucion1"
+        "solucion2"
+        "solucion3"
+        "linea"
+        "quienesomos"
+        "footer";
+        }   
 
-  
-    .ordenSoluciones
-    {
-    flex-direction: column;
-    align-items: stretch;
-
-    }
-    .dimensionesImagSol{
-    width: 20rem;
-    height: 20rem;
-    }
 
 }
 

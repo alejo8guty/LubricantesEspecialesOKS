@@ -1,11 +1,7 @@
 /* import */
 
 @import "variables";
-@import "bootstrap";
-@import "GridIndex";
-@import "GridMtto";
-@import "GridLimp";
-@import "GridContacto";
+
 
 
 /* cambia la medida del rem, 1rem=10px*/
@@ -15,36 +11,9 @@ html{
     *{
     font-family: 'Lato', sans-serif;
     }
-  
-    a{ /* quitamos la lineas de los url*/
-        text-decoration: none; }
 
-    ul{ /* quitmaos las vinetas d elas litas*/
-        list-style-type: none;}
-    
-    h1{
-        font-size: 3rem;
-        font-weight: bold;}
 
-    .ordenSoluciones
-    {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-    
-    }
-    
-    .separarTextoSolucion
-    {
-        padding: 1rem;
-    }
 
-    .principal__titulo{
-        font-size: 4rem;
-        text-align:center;
-        font-weight:bold;
-    
-    }
 
     .dimensionesImagSol{
         width: 30rem;
@@ -53,20 +22,22 @@ html{
         
     }
     .dimensionesImagSol1{
-        width: 15rem;
-        height: 15rem;
-        padding: 1rem;
+        width: 30rem;
+        height: 20rem;
+        padding: 0.2rem;
         
     }
     .dimensionesImagSol2{
         width: 30rem;
-        height: 32rem;
-        padding: 1rem;
+        height: 40rem;
+        padding: 0.2rem;
         
     }
     .dimensionesImagSol3{
-        width: 12rem;
-        height: 12rem;
+        /*max-width: 100%;
+        height: auto;*/
+        width: 30rem;
+        height: 20rem;
         padding: 1rem;
         
     }
@@ -84,56 +55,6 @@ html{
         animation-delay: 3s;
         animation-iteration-count: infinite;
     }
-
-    .contenidoQS{
-        color: map-get($estilos,colorVerde);
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-     img{
-        width: 15rem;
-        height: 16rem;
-        margin-right: 80px;
-        }
-      p{
-        max-width: 100%;
-        }
-    }
-    
-    
-    .solucionesTextoGamma
-    {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    
-    img:hover{
-    
-        height: 30rem;
-        width: 30rem;
-        padding-bottom: 3rem;
-        
-            }
-    }
-
-    .quienesSomos{
-         h2{
-        font-size: 2rem;
-        color:map-get($estilos,colorVerde);
-        text-align:center;
-        font-weight:bold;}
-    
-        p{
-        width: 125rem;
-        text-align: center;
-        margin: 4rem;
-        font-size: 2rem;
-        }
-                }
-        main { 
-            a{
-            font-size: 2rem;}
-        }
 
         /* css para Footer */
 
@@ -154,9 +75,16 @@ html{
     
     .whatsapp{
         position: fixed;
+        z-index: 3;
         right: 4rem;
         bottom: 5rem;
         img{
         width: 5rem;
         }
     }
+
+    @import "bootstrap";
+@import "GridIndex";
+@import "GridMtto";
+@import "GridLimp";
+@import "GridContacto";
