@@ -395,3 +395,124 @@ footer ul li {
 @media screen and (max-width: 570px) {
   .imgContacto {
     display: none; } }
+
+.encabezadoMontaje h1 {
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  padding: 3rem;
+  border: 1px solid black;
+  border-radius: 3rem;
+  background-color: #6C685C;
+  margin-left: 3rem;
+  margin-right: 3rem; }
+
+.encabezadoMontaje p {
+  max-width: 100%;
+  font-size: 1.5rem;
+  margin: 3rem; }
+
+.fondomainmontaje {
+  background-color: #F7EED2; }
+
+.borde1montaje {
+  display: flex;
+  flex-direction: column; }
+  .borde1montaje h2 {
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    border: 1px solid black;
+    border-radius: 3rem;
+    background-color: #6C685C;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    margin-top: 2rem; }
+
+.bordemontaje2 {
+  background-color: #EBE2C7;
+  margin: 1rem; }
+  .bordemontaje2 h3 {
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    border: 1px solid black;
+    border-radius: 3rem;
+    background-color: #6C685C;
+    margin-left: 4rem;
+    margin-right: 4rem;
+    margin-top: 2rem; }
+  .bordemontaje2 p {
+    font-size: 1.6rem;
+    margin: 2rem; }
+
+.contenidoMont {
+  display: flex;
+  flex-direction: row; }
+  .contenidoMont p {
+    max-width: 100%;
+    font-size: 1.8rem;
+    margin: 3rem; }
+  .contenidoMont img {
+    width: 20rem;
+    height: 15rem;
+    margin-top: 2rem;
+    margin-right: 5rem; }
+
+.contenidoMont2 p {
+  max-width: 100%;
+  font-size: 2rem;
+  padding: 4rem;
+  background-color: #F7EED2;
+  margin: rem; }
+
+.galeriaMontaje {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 1rem; }
+  .galeriaMontaje img {
+    width: 10rem;
+    height: 10rem; }
+
+.bordemonaje3 {
+  background-color: #D1C9B2;
+  margin: 2rem; }
+  .bordemonaje3 h4 {
+    padding-left: 2rem; }
+  .bordemonaje3 ul {
+    padding-left: 6rem;
+    font-size: 1.7rem; }
+
+.contenidoMont3 {
+  display: flex;
+  flex-direction: row;
+  margin: 1rem; }
+  .contenidoMont3 h4 {
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    border: 1px solid black;
+    border-radius: 3rem;
+    background-color: #6C685C;
+    margin-left: 5rem;
+    margin-right: 5rem;
+    margin-top: 2rem; }
+
+.contenidomont4 {
+  display: flex;
+  flex-direction: column;
+  background-color: #ABA491;
+  margin: 1rem;
+  max-width: 80%; }
+
+.container-fluid {
+  padding: 2rem; }
+  .container-fluid h2 {
+    font-size: 2rem; }
+  .container-fluid p {
+    font-size: 1.6rem; }
+
+@media screen and (max-width: 540px) {
+  .galeriaMontaje {
+    display: none; } }
