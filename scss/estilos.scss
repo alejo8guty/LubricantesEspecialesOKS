@@ -83,23 +83,11 @@ html{
         }
     }
 
- @import "bootstrap";
-@import "GridIndex";
-@import "GridMtto";
-@import "GridLimp";
-@import "GridContacto";
+
 
 .encabezadoMontaje{
     h1{
-        color: white;
-        text-align: center;
-        font-weight: bold;
-        padding: 3rem;
-        border: 1px solid black; 
-        border-radius: 3rem;  
-        background-color: map-get($estilos,colortitulo1);
-        margin-left: 3rem;
-        margin-right: 3rem; 
+        @include tituloh1
     }
     p{
         max-width: 100%;
@@ -109,7 +97,9 @@ html{
 }
 .fondomainmontaje
 {    background-color: map-get($estilos,colorfondo1);
-
+    .accordion-flush{
+        display: none;
+    }
 }
 
 .borde1montaje{
@@ -117,15 +107,9 @@ html{
     flex-direction: column;
 
     h2  {
-    color: white;
-    text-align: center;
-    padding: 2rem;
-    border: 1px solid black; 
-    border-radius: 3rem;  
-    background-color: map-get($estilos,colortitulo1);
-    margin-left: 3rem;
-    margin-right: 3rem; 
-    margin-top: 2rem;
+        @include tituloh1
+        padding: 2rem;
+        margin-top: 2rem;
     }
     
 
@@ -135,15 +119,11 @@ html{
     background-color: map-get($estilos,colorfondo2);
     margin: 1rem;
     h3  {
-        color: white;
-        text-align: center;
-        padding: 2rem;
-        border: 1px solid black; 
-        border-radius: 3rem;  
-        background-color: map-get($estilos,colortitulo1);
-        margin-left: 4rem;
-        margin-right: 4rem; 
+        @include tituloh1
+        margin-left: 5rem;
+        margin-right: 5rem; 
         margin-top: 2rem;
+        padding: 2rem;
         }
     p{
         font-size: 1.6rem;
@@ -183,8 +163,8 @@ html{
     flex-direction: row;
     justify-content: space-evenly;
     padding: 1rem;
-    img{    width: 10rem;
-        height: 10rem;}
+    img{    width: 20rem;
+        height: 25rem;}
 }
 
 .bordemonaje3{
@@ -205,15 +185,11 @@ html{
     flex-direction: row;
     margin:1rem;
     h4{
-    color: white;
-    text-align: center;
-    padding: 1rem;
-    border: 1px solid black; 
-    border-radius: 3rem;  
-    background-color: map-get($estilos,colortitulo1);
+    @include tituloh1
     margin-left: 5rem;
     margin-right: 5rem; 
     margin-top: 2rem;
+    padding: 1rem;
     }
 
 }
@@ -239,11 +215,31 @@ html{
     }
 }
 
+@media screen and (max-width:768px)
+{
+.imagenMontaje{
+    display: none;
+}
+.contenidoMont3{
+    flex-direction: column;
+    align-items: center;
+}
+
+}
+
+
 @media screen and (max-width:540px)
 {
 
-.galeriaMontaje{
+.accordion-flush{
+    display: block !important;
+}
+.borde1montaje{
     display: none;
 }
-
 }
+@import "bootstrap";
+@import "GridIndex";
+@import "GridMtto";
+@import "GridLimp";
+@import "GridContacto";

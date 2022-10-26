@@ -1,96 +1,96 @@
 /*  grid para la pagina de Index se us VH o FR */
 
-.contenedorIndx{
-   
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 0.4fr 2fr 0.2fr 2fr 1.5fr;
 
-    grid-template-areas: 
-    "titulo titulo titulo"
-    "solucion1 solucion2 solucion3"
-    "linea linea linea"
-    "quienesomos quienesomos fotogrupo"
-    "footer footer footer";
+.card{
+    width: 32rem;
 }
-    
+
+.contenedorIndx{
+    display: flex;
+    flex-direction: column;
+}
 
 .principal__titulo{
-    grid-area: titulo;
-    @include flexcolumn;
-    padding: 2rem;
+
+   h1{ @include tituloh1;}
 }
 
-.solucion1{
-    grid-area: solucion1;
-    @include flexcolumn;
-    a{ /* quitamos la lineas de los url*/
-        text-decoration: none; 
-        font-size: 2rem;}
+.solucionImg{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+   
     img{
-        max-width: 80%;
+        max-width: 100%;
         height: auto;
         img:hover{
-            height: 30rem;
-            width: 30rem;
+            height: 35rem;
+            width: 35rem;
                 }
     }
 
 }
-.solucion2{
-    grid-area: solucion2;
-    @extend .solucion1;
-}
-.solucion3{
-    grid-area: solucion3;
-    @extend .solucion1;
-}
+
 
 .lineaindx{
-    grid-area: linea;
-    padding: 1rem;
+
+    margin: 1rem;
+    hr{
     color: map-get($estilos,colorVerde);
-
+    }
 }
+.ordenquienesomos
+{ background-color: map-get($estilos,colorfondo2 );
+    margin: 2rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: row;
+   
+}
+.quienessomos{
+    display: flex;
+    flex-direction: column;
 
-.quienesomos{
-    grid-area: quienesomos;
+
 
     h2{
-        text-align: center;
-        padding-top: 2rem;
-        color: map-get($estilos,colorVerde);
-        font-weight: bold;
+        @include tituloh1;
         font-size: 2rem;
+        padding: 1.5rem;
+        margin-left: 10rem;
+        margin-right: 10rem; 
     }
-
-    .contenidoQS{
-        color: map-get($estilos,colorVerde);
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        
-  
+}
+.contenidoQS{
+     
       p{
-        max-width: 100%;
-        text-align: center;
         margin: 4rem;
         font-size: 2rem;
+        width: 70rem;
         }
     }
-}
-.fotogrupo{
-    grid-area: fotogrupo;
-    @include flexcolumn;
+
+
+.imagenlogo{
+
     img{
-        width: 20rem;
-        height: 20rem;
-        padding-top: 2rem;
+    margin-top: 8rem;
+    margin-bottom: 2rem;
+    height: auto;
+    max-width: 50%;
     }
 }
+
+.principiosGamma{
+
+
+    font-size: 2.6rem;
+}
+
 .ordenFooter_Indx
 {
-    grid-area: footer;
+   
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -106,54 +106,40 @@
 }
 
 
-@media screen and (max-width:768px)
+@media screen and (max-width:1000px)
 {
-    .contenedorIndx{
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 0.2fr 1fr 1fr 0.2fr 1fr 0.5fr;
-
-    grid-template-areas: 
-    "titulo titulo"
-    "solucion1 solucion2"
-    "solucion3 solucion3"
-    "linea linea"
-    "quienesomos quienesomos"
-    "footer footer";
+    .card{
+        width: 20rem;
     }
-
-    .solucion1{
-
-        img{
-            max-width: 70%;
-            height: auto;
+    .ordenquienesomos{
+        flex-direction: column;
+        align-items: center;
+        flex-flow: column wrap;
+    }
+    .contenidoQS{
+        p{
+            padding: 2rem;
+            width: auto;
         }
     }
-
-    .ordenFooter_Indx{
-
-    flex-flow: column wrap;
-    }
-    .fotogrupo{
-        display: none;
-    }
 }
 
-@media screen and (max-width:540px)
+@media screen and (max-width:660px)
 {
-    .contenedorIndx{
-        grid-template-columns: 1fr;
-        grid-template-rows: 0.2fr 0.5fr 0.5fr 0.5fr 0.2fr 0.5fr 0.4fr;
-    
-        grid-template-areas: 
-        "titulo"
-        "solucion1"
-        "solucion2"
-        "solucion3"
-        "linea"
-        "quienesomos"
-        "footer";
-        }   
-
+    .card{
+        width: 15rem;
+    }
 
 }
+@media screen and (max-width:480px)
+{
+    .card{
+        width: 23rem;
+    }
 
+    .solucionImg{
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
