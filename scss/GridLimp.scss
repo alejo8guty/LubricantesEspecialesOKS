@@ -1,37 +1,58 @@
 
-/*  grid para la pagina de limpiadores */
-
-.contenedorLim{
-   
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 0.5fr 2fr 1fr 1fr 1fr;
-    grid-template-areas: 
-
-    "titulo titulo"
-    "contenido contenido"
-    "galeria1 galeria3"
-    "galeria2 galeria3"
-    "footer footer";
-
-    
-}
-
 
 .tituloLim{
-    grid-area: titulo;
+
+    h1{@include tituloh1;}
+    }
+
+.galerialimpieza{
+   
+display: flex;
+flex-direction: column;
+align-items: center;
+    
+}
+.filagaleria1{
     display: flex;
     flex-direction: row;
-    justify-content: center;
     align-items: center;
 }
+.columnacontenido1{
+img{
+    max-width: 100%;
+    height: auto; 
+       
+}}
 
-.contenidoProdLim{
 
-    grid-area: contenido;
+.columnacontenido2{
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    img{
+    max-width: 100%;
+    height: auto;
+}}
+.filagaleria2{
+    img{
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+
+.contenidoProdLim{
+    p{
+        font-size: 2rem;
+        margin: 3rem;
+    }
+    h2{@include tituloh1;
+    padding: 2rem;}
+    h3{@include tituloh1;
+    padding: 1.5rem;}
+
+    display: flex;
+    flex-direction: column;
+
 }
 
 .contenidoProd1Lim{
@@ -39,127 +60,38 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
+    p{
+        display: flex;
+        flex-flow: row wrap;
+        font-size: 2rem;
+    }
 }
 
-.contenidoProd2Lim
-{
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: center;
-}
 
-.contenidoProd1Lim p{
-    display: flex;
-    flex-flow: row wrap;
-    width: 100rem;
-    font-size: 2rem;
-}
-.contenidoProd2Lim p{
-    display: flex;
-    flex-flow: row wrap;
-    width: 100rem;
-    font-size: 2rem;
-}
 
-.galeria1Limp{
-    grid-area:galeria1;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: flex-end;
+@media screen and (max-width:960px)
+{ 
+    .contenidoProd1Lim{
+        flex-direction: column;
+        align-items: center;
+        
+    }
 
-}
-.galeria2Limp{
-
-    grid-area:galeria2;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: flex-end;
-}
-.galeria3Limp{
-
-    grid-area:galeria3;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: flex-start;
-
-}
-
-.footerlimpiadores{
-grid-area: footer;
-@extend .ordenFooter_Indx
-
-}
-
-@media screen and (max-width:768px)
-{ .contenedorLim{
-   
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows:  0.5fr 2fr 1fr 1fr;
-    grid-template-areas: 
-    "titulo titulo"
-    "contenido contenido"
-    "galeria1 galeria2"
-    "footer footer";
-                }
-
-    .galeria2Limp{
-        justify-content: flex-start;
-       
-                }
-    .galeria3Limp{
-        display: none;
-    }  
 
 }
 @media screen and (max-width:540px)
-{ .contenedorLim{
-   
-    grid-template-columns: 1fr;
-    grid-template-rows:  0.2fr 1.5fr 0.4fr 0.4fr 0.4fr;
-    grid-template-areas: 
-   
-    "titulo"
-    "contenido"
-    "galeria1"
-    "galeria2"
-    "footer";
-    }
-
-    .contenidoProd1Lim{
-   
-    flex-direction: column-reverse;
-    align-items: center;  
-    }
-
+{ 
     .dimensionesImagSol3{
-        width: 20rem;
-        height: 20rem;}
-
-    .dimensionesImagSol1{
-            width: 30rem;
-            height: 30rem;}
-
-    .galeria2Limp{
-        justify-content: center;
+        max-width: 100%;
+        height: auto;
     }
-
-    .galeria1Limp{ 
-       justify-content: center;
-    }
-    .galeria3Limp{
+    .columnacontenido1
+    {
         display: none;
     }
-    .h1{
-        font-size: 8rem;
-    }
-    .contenidoProd1Lim p{
-        width: 30rem;
-        font-size: 2rem;
-    }
-    .contenidoProd2Lim p{
-        width: 30rem;
-        font-size: 2rem;
-                        }
+   .filagaleria2{
+    display: none;
+   }
 }
 
 

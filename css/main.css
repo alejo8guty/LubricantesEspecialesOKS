@@ -301,23 +301,44 @@ footer ul li {
 .principiosGamma {
   font-size: 2.6rem; }
 
-.ordenFooter_Indx, .footerMantenimiento, .footerlimpiadores, .footerContacto {
+.ordenFooter_Indx, .footerMantenimiento, .footerContacto {
+  display: flex;
+  flex-direction: column;
+  background-color: #1f4591; }
+
+.primerfooter {
+  padding-top: 2rem;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  align-items: center;
-  color: white;
-  background-color: #1f4591; }
-  .ordenFooter_Indx a, .footerMantenimiento a, .footerlimpiadores a, .footerContacto a {
+  align-items: center; }
+  .primerfooter a {
     /* quitamos la lineas de los url*/
     text-decoration: none; }
-  .ordenFooter_Indx ul, .footerMantenimiento ul, .footerlimpiadores ul, .footerContacto ul {
+  .primerfooter ul {
     /* quitmaos las vinetas d elas litas*/
     list-style-type: none; }
+    .primerfooter ul li {
+      color: white; }
+
+.segundofooter {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem; }
+  .segundofooter p {
+    color: white;
+    font-size: 1.2rem;
+    margin-left: 2rem; }
 
 @media screen and (max-width: 1000px) {
   .card {
     width: 20rem; }
+    .card p {
+      font-size: 1.6rem; }
+    .card li {
+      font-size: 1.4rem; }
+    .card a {
+      font-size: 1.4rem; }
   .ordenquienesomos {
     flex-direction: column;
     align-items: center;
@@ -328,14 +349,27 @@ footer ul li {
 
 @media screen and (max-width: 660px) {
   .card {
-    width: 15rem; } }
+    width: 15rem; }
+    .card p {
+      font-size: 1.6rem; }
+    .card li {
+      font-size: 1.4rem; }
+    .card a {
+      font-size: 1.4rem; } }
 
 @media screen and (max-width: 480px) {
   .card {
     width: 23rem; }
+    .card p {
+      font-size: 1.5rem; }
+    .card li {
+      font-size: 1.3rem; }
+    .card a {
+      font-size: 1.3rem; }
   .solucionImg {
     flex-direction: column;
-    align-items: center; } }
+    align-items: center;
+    align-content: space-around; } }
 
 /*  grid para la pagina de Mantenimiento */
 .contenedorMtto {
@@ -472,107 +506,93 @@ footer ul li {
     max-width: 100%;
     height: auto; } }
 
-/*  grid para la pagina de limpiadores */
-.contenedorLim {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 0.5fr 2fr 1fr 1fr 1fr;
-  grid-template-areas: "titulo titulo" "contenido contenido" "galeria1 galeria3" "galeria2 galeria3" "footer footer"; }
+.tituloLim h1 {
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  padding: 3rem;
+  border: 1px solid black;
+  border-radius: 3rem;
+  background-color: #6C685C;
+  margin-left: 3rem;
+  margin-right: 3rem; }
 
-.tituloLim {
-  grid-area: titulo;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center; }
-
-.contenidoProdLim {
-  grid-area: contenido;
+.galerialimpieza {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly; }
+  align-items: center; }
+
+.filagaleria1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center; }
+
+.columnacontenido1 img {
+  max-width: 100%;
+  height: auto; }
+
+.columnacontenido2 {
+  display: flex;
+  flex-direction: column; }
+  .columnacontenido2 img {
+    max-width: 100%;
+    height: auto; }
+
+.filagaleria2 img {
+  max-width: 100%;
+  height: auto; }
+
+.contenidoProdLim {
+  display: flex;
+  flex-direction: column; }
+  .contenidoProdLim p {
+    font-size: 2rem;
+    margin: 3rem; }
+  .contenidoProdLim h2 {
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    padding: 3rem;
+    border: 1px solid black;
+    border-radius: 3rem;
+    background-color: #6C685C;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    padding: 2rem; }
+  .contenidoProdLim h3 {
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    padding: 3rem;
+    border: 1px solid black;
+    border-radius: 3rem;
+    background-color: #6C685C;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    padding: 1.5rem; }
 
 .contenidoProd1Lim {
   display: flex;
   flex-direction: row;
   justify-content: center; }
+  .contenidoProd1Lim p {
+    display: flex;
+    flex-flow: row wrap;
+    font-size: 2rem; }
 
-.contenidoProd2Lim {
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: center; }
-
-.contenidoProd1Lim p {
-  display: flex;
-  flex-flow: row wrap;
-  width: 100rem;
-  font-size: 2rem; }
-
-.contenidoProd2Lim p {
-  display: flex;
-  flex-flow: row wrap;
-  width: 100rem;
-  font-size: 2rem; }
-
-.galeria1Limp {
-  grid-area: galeria1;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: flex-end; }
-
-.galeria2Limp {
-  grid-area: galeria2;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: flex-end; }
-
-.galeria3Limp {
-  grid-area: galeria3;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: flex-start; }
-
-.footerlimpiadores {
-  grid-area: footer; }
-
-@media screen and (max-width: 768px) {
-  .contenedorLim {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 0.5fr 2fr 1fr 1fr;
-    grid-template-areas: "titulo titulo" "contenido contenido" "galeria1 galeria2" "footer footer"; }
-  .galeria2Limp {
-    justify-content: flex-start; }
-  .galeria3Limp {
-    display: none; } }
+@media screen and (max-width: 960px) {
+  .contenidoProd1Lim {
+    flex-direction: column;
+    align-items: center; } }
 
 @media screen and (max-width: 540px) {
-  .contenedorLim {
-    grid-template-columns: 1fr;
-    grid-template-rows: 0.2fr 1.5fr 0.4fr 0.4fr 0.4fr;
-    grid-template-areas: "titulo" "contenido" "galeria1" "galeria2" "footer"; }
-  .contenidoProd1Lim {
-    flex-direction: column-reverse;
-    align-items: center; }
   .dimensionesImagSol3 {
-    width: 20rem;
-    height: 20rem; }
-  .dimensionesImagSol1 {
-    width: 30rem;
-    height: 30rem; }
-  .galeria2Limp {
-    justify-content: center; }
-  .galeria1Limp {
-    justify-content: center; }
-  .galeria3Limp {
+    max-width: 100%;
+    height: auto; }
+  .columnacontenido1 {
     display: none; }
-  .h1 {
-    font-size: 8rem; }
-  .contenidoProd1Lim p {
-    width: 30rem;
-    font-size: 2rem; }
-  .contenidoProd2Lim p {
-    width: 30rem;
-    font-size: 2rem; } }
+  .filagaleria2 {
+    display: none; } }
 
 .contenedorContacto {
   display: flex;
